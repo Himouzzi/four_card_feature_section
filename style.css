@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  /* Primary Colors */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  /* Neutral Colors */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--very-light-gray);
+  line-height: 1.5;
+}
+
+.container {
+  width: 33%;
+  margin: auto;
+  text-align: center;
+}
+
+.main-title {
+  font-weight: 200;
+  color: var(--very-dark-blue);
+  margin-top: 70px;
+}
+
+.secondary-title {
+  font-weight: 600;
+  color: var(--very-dark-blue);
+}
+
+.header-content {
+  color: var(--grayish-blue);
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.cards {
+  margin: 50px auto;
+  width: 70%;
+  max-width: 1440px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.card {
+  width: 400px;
+  height: 270px;
+  background-color: #fff;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgb(230, 230, 230);
+}
+
+.card-title {
+  color: var(--very-dark-blue);
+  font-weight: 600;
+}
+
+.card-content {
+  color: var(--grayish-blue);
+  margin-top: 20px;
+}
+
+.card-img {
+  display: block;
+  float: right;
+  margin-top: 50px;
+  margin-left: 270px;
+}
+
+.supervisor {
+  border-top: 7px solid var(--cyan);
+  grid-column: 1;
+  grid-row: 2/4;
+}
+
+.team-builder {
+  border-top: 7px solid var(--red);
+  grid-column: 2;
+  grid-row: 1/3;
+}
+
+.karma {
+  border-top: 7px solid var(--orange);
+  grid-column: 2;
+  grid-row: 3/5;
+}
+
+.calculator {
+  border-top: 7px solid var(--blue);
+  grid-column: 3;
+  grid-row: 2/4;
+}
+
+.attribution {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 90%;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
